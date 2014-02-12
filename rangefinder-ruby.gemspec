@@ -8,10 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = Rangefinder::SST::VERSION
   spec.authors       = ["Dirk Gadsden"]
   spec.email         = ["dirk@esherido.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "Single-site tracking for Rangefinder"
+  spec.description   = spec.summary
   spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.license       = "New BSD"
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
