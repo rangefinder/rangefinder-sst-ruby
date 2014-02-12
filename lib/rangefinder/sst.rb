@@ -55,5 +55,16 @@ module Rangefinder
       @socket = UDPSocket.new
       @socket.connect(@endpoint, @port)
     end
+    
+    def code
+      <<eos
+<script type="text/javascript">
+  var _rangefinder_queue = _rangefinder_queue || [];
+  _rangefinder_queue.push(['track', #{@site_id.to_s}, #{@server_id.to_s}]);
+  document.write(unescape("%3Cscript src='//#{@script}' type='text/javascript'%3E%3C/script%3E"));
+</script>
+eos
+    end
+    
   end
 end
