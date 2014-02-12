@@ -31,7 +31,7 @@ module Rangefinder
     end
     
     def track(visit)
-      connect unless @socket
+      connect if @socket.nil?
       
       @id = self.class.rand.call
       packet = 'track:'+Addressable::URI.form_encode(
