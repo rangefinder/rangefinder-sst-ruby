@@ -1,29 +1,27 @@
-# Rangefinder::Ruby::Sst
+## Rangefinder Server-Side Tracking for Ruby
 
-TODO: Write a gem description
+[Rangefinder](http://rangefinderapp.com/)'s server-side tracking allows you to record basic visitor information for every visitor, even those who block Rangefinder's client-side JavaScript. The client-side analytics fills in extra details, such as screen dimensions and page title, when/if it runs.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+This library is designed to run on Ruby 1.8 and newer. Please let me know if it doesn't.
 
-    gem 'rangefinder-ruby-sst'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rangefinder-ruby-sst
+```
+gem install rangefinder-sst
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+There are two ways to use the SST: as **standalone library** or as **Rack middleware**.
 
-## Contributing
+### Rack middleware
 
-1. Fork it ( http://github.com/<my-github-username>/rangefinder-ruby-sst/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+See [example/rack.ru](example/rack.ru) for an example of how to use the Rack middleware. More documentation coming soon.
+
+### Library ###
+
+The library code is in [lib/rangefinder/sst.rb](lib/rangefinder/sst.rb). It's short and should be very readable.
+
+## License
+
+Licensed under the New BSD License. See LICENSE for details.
